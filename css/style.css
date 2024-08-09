@@ -1,0 +1,533 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+a{
+    text-decoration: none;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+/* Generic Styles */
+main{
+    min-height: 100vh;
+    background-color: #f2f2f2; 
+}
+
+body {
+    background: white;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px; /* this is 1em */
+    line-height: 1.5;
+    color: black;
+}
+
+h1 {
+    font-size: 35px;
+
+    font-weight: bold;
+    margin-bottom: 18px;
+   
+}
+
+h2 {
+    font-size: 48px;
+    line-height: 1.5;
+    font-weight: bold;
+    margin-bottom: 12px;
+    text-align: center;
+   
+}
+
+h3 {
+    font-size: 32px;
+    line-height: 1.5;
+    font-weight: bold;
+    margin-bottom: 12px;
+    padding-left: 14px;
+}
+
+P {
+    margin-bottom: 1em; /* font-size is 14, so 1em= 14px */   
+}
+
+img {
+    max-width: 100%;   
+}
+
+/* hamberg container */
+/* Theming */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"); /* import font */
+
+:root{
+    --white: #f9f9f9;
+    --black: #36383F;
+    --gray: #85888C;
+} /* variables*/
+
+/* Reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    background-color: var(--black);
+    box-shadow: 1px 1px 5px 0px var(--gray);
+    position: sticky;
+    top: 0;
+    width: 100%;
+}
+
+/* Nav menu */
+.nav{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: var(--black);
+    overflow: hidden;
+}
+
+.menu a{
+    display: block;
+    padding: 30px;
+    color: var(--white);
+}
+
+.menu a:hover{
+    background-color: var(--gray);
+}
+
+.logo{
+    display: inline-block;
+    height: 80px; width: auto;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+/* LOGO Animation */
+.logo{
+    animation: fadeIn 2s;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  } /*End of LOGO Animation*/
+
+.nav{
+    max-height: 0;
+    transition: max-height .5s ease-out;
+}
+
+/* Menu Icon */
+.hamb{
+    cursor: pointer;
+    float: right;
+    padding: 40px 20px;
+}/* Style label tag */
+
+.hamb-line {
+    background: var(--white);
+    display: block;
+    height: 2px;
+    position: relative;
+    width: 24px;
+
+} /* Style span tag */
+
+.hamb-line::before,
+.hamb-line::after{
+    background: var(--white);
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+
+.hamb-line::before{
+    top: 5px;
+}
+
+.hamb-line::after{
+    top: -5px;
+}
+
+.side-menu {
+    display: none;
+} /* Hide checkbox */
+
+/* Toggle menu icon */
+.side-menu:checked ~ nav{
+    max-height: 100%;
+}
+
+.side-menu:checked ~ .hamb .hamb-line {
+    background: transparent;
+}
+
+.side-menu:checked ~ .hamb .hamb-line::before {
+    transform: rotate(-45deg);
+    top:0;
+}
+
+.side-menu:checked ~ .hamb .hamb-line::after {
+    transform: rotate(45deg);
+    top:0;
+} /* Hide checkbox */
+
+
+footer{
+    color: white;
+    padding-left: 30px;
+    padding-top: 14px;
+}
+
+footer{
+    background-color: #36383F;
+    height: 50px;  
+}
+
+/* HOME PAGE STYLES */
+.container-home {
+    border-radius: 5px;
+    background-color: #f2f2f2; 
+  }
+
+.welcome h1{
+    text-align: center;
+}
+
+/* search bar*/
+
+form.example input[type=text] {
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid grey;
+    float: left;
+    width: 80%;
+    background: #f1f1f1;
+    margin-top: 14px;
+   margin-left: 28px;
+  }
+  
+  form.example button {
+    float: left;
+    width: 10%;
+    padding: 10px;
+    background: #04AA6D;
+    color: white;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-left: none;
+    cursor: pointer;
+    margin-top: 14px;
+   
+  }
+  
+  form.example button:hover {
+    background: gray;
+  }
+
+  form.example::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+.welcome img{
+    text-align: center;
+    color:white;  
+    margin-top: 24px;
+    margin-bottom: 14px;  
+    width: 100%; 
+}
+
+/* home page product images */
+
+.bagimg,.brushimg,.chopsticksimg,.choppingimg{
+    width: 100%;
+    text-align: center;
+    padding-left: 28px;
+    padding-right: 28px; 
+}
+
+main p{
+    text-align: center;
+    
+} /* end of home page */ 
+
+
+/* About US page styles*/
+.kitchen-video iframe{  
+    width: 100%;
+    height: 450px;
+}
+
+.container-about {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+  }
+
+.kitchen-video{
+    text-align: center;
+}
+
+.about-content p{
+    text-align: left;
+    padding-left: 28px;
+    padding-right:28px;
+    padding-top: 14px;
+}
+
+.content-img{
+   display: block;
+   padding-left: auto;
+   padding-right: auto; 
+}
+
+.about-us h1{
+    text-align: center;
+}
+/* team member information grid styles */ 
+.grid2 img{
+    width: 100%;  
+}
+
+.anna-img, .john-img{
+    background-color: #c1e0d5;
+    margin-left:28px;
+    margin-right: 28px; 
+}
+
+.anna-inform,.john-inform {
+    background-color: #c1e0d5;
+    margin-left:28px ;
+    margin-right: 28px;
+}
+
+.anna-inform h4, .anna-inform p{
+    text-align: left;
+    padding-left: 14px;
+}
+
+.john-inform h4, .john-inform p{
+    text-align: left;
+    padding-left: 14px;
+}
+
+footer{
+    margin-top: 28px;
+  
+}
+
+
+
+/* CONTACT PAGE STYLES*/
+
+.container-background{
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 14px; 
+}
+
+.container-background h1{
+    text-align: center;
+}
+
+.contact-inform {
+    text-align: left;
+    padding-left: 28px;
+}
+
+ ul{
+    text-align: center;
+    padding-bottom: 28px;
+}
+
+.form label{
+    padding-left: 28px;
+}
+
+.form input { 
+    width: 90%;
+    height: 40px;
+    margin-left: 28px;
+    border: solid 2px gray;
+}
+
+#message{
+    height: 150px;
+    width: 90%;
+}
+    
+.form button{
+    font-size: 15px;
+    margin-left: 28px;
+    width: 80px;
+    height: 40px;
+    background-color: #04AA6D;
+    color: white;
+    border: solid 2px gray;;
+}
+
+.form button:hover{
+    background-color: #85888C;
+}
+
+/* skip links */
+.skip-links{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .skip-links a{
+    position: absolute;
+    top: -3em;
+    background-color: black;
+    color:white;
+    padding: .5em 1em;
+    font-weight: bold;
+  }
+
+  .skip-links a:focus{
+    top: 0;
+  }
+
+/* back to top */
+
+.footer a{
+    position: absolute;
+    top: -3em;
+    background-color: black;
+    color:white;
+    padding: 1em;
+    font-weight: bold;
+  }
+
+/* DESKTOP VERSON*/
+
+@media (min-width: 768px) {    
+.nav{
+    max-height: none;
+    top: 0;
+    position: relative;
+    float: right;
+    width: fit-content;
+    background-color: transparent;
+    }
+.menu li{
+    float: left;
+    font-size: 18px;
+    }
+
+.menu a:hover{
+    background-color: transparent;
+    color: var(--gray);
+    }
+
+.hamb{
+    display: none;
+    }
+/* HOME PAGE */
+.container-p{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    grid-gap: 10px;
+    }
+/*ABOUT PAGE*/
+.kitchen-video iframe{
+    width: 80%;
+}
+
+.about-content p{
+    text-align: left;
+    margin-top: 20px;
+    padding-left: 110px;
+    padding-right: 110px;
+    }
+
+.grid2{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    }
+
+.john-img{
+    grid-column: 2/3;
+    margin-left: -28px;
+    margin-top:-5px;
+    }
+
+
+.john-inform{
+    grid-row: 3/2;
+    padding-right: 14px;
+    }
+
+.anna-inform{
+    margin-left: -28px;
+    padding-right: 14px;
+   
+    }
+
+/*CONTACT PAGE*/
+.container-form{
+    display: grid;
+    grid-template-columns: auto auto;
+    padding-right: 28px;
+    }
+
+.contact-inform{
+    text-align: center;
+    padding-left: 28px;
+    padding-right: 100px;
+    }
+
+.form input {     
+    height: 40px;
+    width: 450px;
+    border: solid 2px gray;
+    }
+    
+#message{
+    height: 150px;
+    width: 450px;
+    }
+
+
+
+}

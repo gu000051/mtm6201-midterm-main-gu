@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Eco Kitchen</title>
+</head>
+<body>
+    <div class="container" id="top">
+       <ul class="skip-links">
+        <li><a href="#nav">Skip to main nav</a></li>
+        <li><a href="#main">Skip to main content</a></li>
+       </ul>
+  <header role="banner">
+        <!-- Logo-->
+        <a href="./index.html">
+          <img class="logo" src="images/logo.png" alt="logo" aria-details="logoimg">
+        </a>
+        <!-- Hamburger icon -->
+        <input class="side-menu" type="checkbox" id="side-menu"/>
+        <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
+
+        <nav class="nav">
+          <!--Menu-->
+            <ul class="menu">
+              <li><a href="./index.html" aria-label="navigation bar home"> HOME</a></li>
+              <li><a href="./about.html" aria-label="navigation bar about"> ABOUT</a></li>
+              <li><a href="./contact.html" aria-label="navigation bar contact us"> CONTACT US</a></li>
+            </ul>
+         </nav>
+  </header>
+
+  <main class="container-about" role="main">
+
+        <section class="about-us"> <!--about company inform with video and paragraphs -->
+            <h1 role="heading">About US</h1>
+            <div class="kitchen-video">
+                <iframe src="https://www.youtube.com/embed/7o2LxVSO0rc" title="YouTube video player" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+                </iframe>
+            </div>
+            <div class="about-content">
+              <p>
+                Welcome to Eco- Kitchen, 
+                an online shop that focuses on making sustainability simple in the kitchen by offering 
+                Eco-friendly alternatives for plastics and other waste.
+                Our slogan is, “Cooking for the future”. The slogan means that products are eco-friendly and use materials 
+                that are biodegradable,which will help the Earth see a future, versus the competition’s kitchenware that 
+                uses non-biodegradable materials which are harmful to the environment.
+             </p>
+            </div>
+        </section> <!--end of the first section about company-->
+
+        <section  itemscope itemtype="https://schema.org/Person" class="section-team">
+            <h2>Our Team </h2>
+
+            <div class="container-team">
+                <!-- four dives with an image some text elements-->
+
+             <div class="grid2">
+                <div class="anna-img">
+                        <picture>
+                            <source srcset="images/member-Anna-480_x_300.jpg,
+                                            images/member-Anna-720_x_450.jpg 1.5x,
+                                            images/member-Anna-1440_x_900.jpg 2x"
+                            media="(min-width: 961px)" />
+  
+                            <source srcset="images/member-Anna-320_x_250.jpg,
+                                            images/member-Anna-480_x_375.jpg 1.5x,
+                                            images/member-Anna-960_x_750.jpg 2x"
+                            media="(max-width: 960px)" />
+
+                          <img src="images/member-Anna.jpg" alt="Anna" aria-details="annaimg">
+                        </picture>
+                </div>
+
+                <div class="anna-inform">
+                     <h3 itemprop="name"> Anna </h3>
+                     <h4 itemprop="jobTitle">CEO and Co-Owner </h4>
+                     <p>
+                    Anna has always been passionate about environmental sustainability and has a 
+                    background in business and entrepreneurship. After noticing a gap in the market 
+                    for eco-friendly kitchenware, she founded Eco Kitchen with the vision of reducing 
+                    waste in the kitchen while providing high-quality, functional products.
+                     </p>
+                </div>
+
+                <div class="john-img">
+                    <picture>
+                        <source srcset="images/member-John-480_x_300.jpg,
+                                        images/member-John-720_x_450.jpg 1.5x,
+                                        images/member-John-1440_x_900.jpg 2x"
+                         media="(min-width: 961px)" />
+
+                        <source srcset="images/member-John-320_x_250.jpg,
+                                        images/member-John-480_x_375.jpg 1.5x,
+                                        images/member-John-960_x_750.jpg 2x"
+                        media="(max-width: 960px)" />
+
+                     <img src="images/member-John.jpg" alt="john" aria-details="johnimg" >
+                    </picture>
+                </div>
+
+                <div class="john-inform">
+                     <h3 itemprop="name"> John</h3>
+                     <h4 itemprop="jobTitle">CFO and Co-Owner </h4>
+                     <p>
+                        As CFO, John is responsible for the company's finances and operations. 
+                        He's a natural problem-solver and is always looking for ways to optimize 
+                        the company's financial performance. He's also a strategic thinker who 
+                        understands the importance of balancing financial goals with environmental 
+                        sustainability.
+                     </p>
+                </div> 
+             </div>        
+            </div> <!-- end container-->
+        </section> <!-- end section-team-->
+
+  </main>
+  
+  <footer role="contentinfo">
+        <div class="footer">
+          <!-- some text -->
+          &#169;  Copyright eco-kitchen 2023 <a href="#top">Back to Top</a>
+       </div> <!-- end container -->
+  </footer>
+
+ </div>
+</body>
+</html>

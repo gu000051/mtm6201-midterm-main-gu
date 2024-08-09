@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Eco Kitchen</title>
+    <style>
+      /* Style the search box inside the navigation bar */
+      form.example input[type="text"] {
+          padding: 10px;
+          font-size: 17px;
+          border: 1px solid grey;
+          float: left;
+          width: 80%;
+          background: #f1f1f1;
+          margin-top: 14px;
+          margin-left: 28px;
+          border-radius: 8px; /* 添加圆角 */
+      }
+
+      /* Style the submit button */
+      form.example button {
+          float: left;
+          width: 10%;
+          padding: 10px;
+          background: #04AA6D;
+          color: white;
+          font-size: 17px;
+          border: 1px solid grey;
+          border-left: none;
+          cursor: pointer;
+          margin-top: 14px;
+          border-radius: 8px; /* 添加圆角 */
+      }
+
+      form.example button:hover {
+          background: #0b7dda;
+      }
+
+      /* Clear floats */
+      form.example::after {
+          content: "";
+          clear: both;
+          display: table;
+      }
+  </style>
+    
+  </head>
+
+  <body>
+    <div class="container" id="top">
+      <ul class="skip-links" >
+        <li><a href="#nav">Skip to main nav</a></li>
+        <li><a href="#main">Skip to main content</a></li>
+      </ul>
+    <header role="banner">
+      <!-- Logo-->
+       <a href="./index.html">
+          <img class="logo" src="images/logo.png" alt="logo" aria-details="logoimg">
+       </a>
+      <!-- Hamburger icon -->
+       <input class="side-menu" type="checkbox" id="side-menu"/>
+       <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
+       <nav class="nav" role="navigation">
+        <!--Menu-->
+           <ul class="menu">
+               <li><a href="./index.html" aria-label="navigation bar home"> HOME</a></li>
+               <li><a href="./about.html" aria-label="navigation bar about"> ABOUT</a></li>
+               <li><a href="./contact.html" aria-label="navigation bar contact us"> CONTACT US</a></li>
+           </ul>
+       </nav>
+    </header>
+
+    <main class="container-home" role="main">
+
+      <form class="example" action="/action_page.php">
+        <input type="text" placeholder="Search.." name="search">
+        <button type="submit"><i class="fa fa-search"></i></button>
+      </form>
+     
+
+      <div class="welcome">
+        <picture> 
+          <source srcset="images/banner-480_x_300.jpg,
+                          images/banner-720_x_450.jpg 1.5x,
+                          images/banner-1440_x_900.jpg 2x"
+          media="(min-width: 961px)" />
+
+          <source srcset="images/banner-320_x_250.jpg,
+                          images/banner-480_x_375.jpg 1.5x,
+                          images/banner-960_x_750.jpg 2x"
+          media="(max-width: 960px)" />
+
+          <img src="images/banner-img.jpg" alt="bannerimg" aria-details="bannerimg">
+        </picture>
+
+        <h1 class="waviy" role="heading">
+            <span style="--i:1">E</span>
+            <span style="--i:2">C</span>
+            <span style="--i:3">O</span>
+            <span style="--i:4">-</span>
+            <span style="--i:5">K</span>
+            <span style="--i:6">I</span>
+            <span style="--i:7">T</span>
+            <span style="--i:8">C</span>
+            <span style="--i:9">H</span>
+            <span style="--i:10">E</span>
+            <span style="--i:11">N</span>
+        </h1>
+      </div> 
+
+      <div class="container-p">
+        <div class="product-one"> <!--the first product-->
+          <div class="bagimg">
+            <picture>
+            <source srcset="images/reusable-netbag-480_x_300.jpg,
+                            images/reusable-netbag-720_x_450.jpg 1.5x,
+                            images/reusable-netbag-1440_x_900.jpg 2x"
+                    media="(min-width: 961px)" />
+
+           <source srcset="images/reusable-netbag-320_x_250.jpg,
+                           images/reusable-netbagr-480_x_375.jpg 1.5x,
+                           images/reusable-netbag-960_x_750.jpg 2x"
+                    media="(max-width: 960px)" />
+            <img src="images/reusable-netbag.jpg" alt="bag" aria-details="bagimg">
+          </picture>
+          </div>
+
+            <p>Reusable Net Produce Bag - 100% Cotton</p>
+            <p>$13.00 CAD</p>
+        </div> <!--end of the first product inform-->
+
+      <div class="product-two"> <!--the second product-->
+         <div class="brushimg">
+          <picture>
+            <source srcset="images/scrub-brush-480_x_300.jpeg,
+                            images/scrub-brush-720_x_450.jpeg 1.5x,
+                            images/scrub-brush-1440_x_900.jpeg 2x"
+                    media="(min-width: 961px)" />
+
+            <source srcset="images/scrub-brush-320_x_250.jpeg,
+                            images/scrub-brush-480_x_375.jpeg 1.5x,
+                            images/scrub-brush-960_x_750.jpeg 2x"
+                    media="(max-width: 960px)" />
+            <img src="images/scrub-brush.jpeg" alt="brush" aria-details="brushimg">
+          </picture>
+         </div>
+            <p>Kitchen Scrub Brush</p>
+            <p>$8.00 CAD</p>
+      </div> <!--end of the second product inform-->
+
+      <div class="product-three"> <!--the third product-->
+         <div class="choppingimg">
+           <picture>
+              <source srcset="images/chopping-board-480_x_300.jpeg,
+                              images/chopping-board-720_x_450.jpeg 1.5x,
+                              images/chopping-board-1440_x_900.jpeg 2x"
+                      media="(min-width: 961px)" />
+
+              <source srcset="images/chopping-board-320_x_250.jpeg,
+                              images/chopping-board-480_x_375.jpeg 1.5x,
+                              images/chopping-board-960_x_750.jpeg 2x"
+                      media="(max-width: 960px)" />
+              <img src="images/chopping-board.jpeg" alt="chopping-board" aria-details="boardimg">
+          </picture>
+         </div>
+            <p>Chopping Board</p>
+            <p>$20.00 CAD</p>
+      </div> <!--end of the second product inform-->
+
+      <div class="product-four"> <!--the fourth product-->
+         <div class="chopsticksimg">
+            <picture>
+              <source srcset="images/kitchenware-480_x_300.jpg,
+                              images/kitchenware-720_x_450.jpg 1.5x,
+                              images/kitchenware-1440_x_900.jpg 2x"
+                      media="(min-width: 961px)" />
+
+              <source srcset="images/kitchenware-320_x_250.jpg,
+                              images/kitchenware-480_x_375.jpg 1.5x,
+                              images/kitchenware-960_x_750.jpg 2x"
+                      media="(max-width: 960px)" />
+
+            <img src="images/kitchenware.jpg" alt="chopsticks" aria-details="chopsticksimg">
+          </picture>
+         </div>
+            <p>Reusable-utensil set</p>
+            <p>$15.00 CAD</p>
+      </div> <!--end of the second product inform-->
+    </div>
+    </main>
+
+    <footer role="contentinfo">
+      <div class="footer">
+        <!-- some text -->
+        &#169;  Copyright eco-kitchen 2023 <a href="#top">Back to Top</a>
+    </div> <!-- end container -->
+    </footer>
+    </div>
+  </body>
+</html>
